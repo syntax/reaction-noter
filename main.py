@@ -12,7 +12,7 @@ apikey = ''
 
 @client.event
 async def on_raw_reaction_add(reaction):
-    rudeuser = reaction.message_id
+    rudeuser = reaction.user_id
     if reaction.event_type == 'REACTION_ADD':
         if reaction.emoji in bademojis:
             embed = discord.Embed(title='Found a dickhead',
